@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>РЕГИСТРАЦИЯ</h1>
+    <form method="POST" action="{{ url_for('register') }}">
+        <ul>
+            <li class="first">
+                <label for="login">
+                    <input type="text" name="Login" id="name" placeholder="Введите ваше имя..." required>
+                </label>
+            </li>
+            <li class="second">
+                <label for="age">
+                    <input type="text" name="Age" id="age" placeholder="Введите возраст..." required>
+                </label>
+            </li class="third">
+            <li class="second">
+                <label for="email">
+                    <input type="emai" name="Email" id="email" placeholder="Введите ваш Email..." required>
+                </label>
+            </li>
+            <li class="fourth">
+                <label for="passowrd">
+                    <input type="password" name="Password" id="password" placeholder="Введите парооль..." required> 
+                </label>
+                
+            </li>
+        </ul>
+        <a href="{{ url_for('main') }}">
+            <button type="submit" class="button">REGISTER</button>
+        </a>
+    </form>
+    {% endblock %}
+</body>
+</html>
