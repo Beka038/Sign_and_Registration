@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>Sign-In</h1>
+    <form method="POST" action="{{ url_for('sign') }}">
+        <ul>
+            <li>
+                <label for="Login">
+                    <input type="text" name="Login" id="name" placeholder="Введите логин" required>
+                </label>
+            </li>
+            <li>
+                <label for="Password">
+                    <input type="password" name="Password" id="password" placeholder="Введите пароль" required>
+                </label>
+            </li>
+        </ul>
+        <button type="submit" class="button">SignIn</button>
+    </form>
+    {% endblock %}
+</body>
+</html>
